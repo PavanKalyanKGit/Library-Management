@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Book</title>
+     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2991/2991148.png">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .outermost {
+            border: 5px solid #2c3e50;
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 1200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+            display: block;
+            border: 3px solid #2c3e50;
+            background-color: white;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 900px;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 2px solid #2c3e50;
+            padding: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.1em;
+            background-color: #f0f2f5;
+            text-align: center;
+        }
+        th {
+            background-color:  #4f667e;
+            color: white;
+        }
+        td {
+            text-align: center;
+        }
+    </style>
+    <link rel="icon" type="image/x-icon" href="images/faviconimg.jpg">
+</head>
+<body>
+    <h1>Library Management</h1>
+    <div class="outermost">
+        <img src="images/allbooks.jpeg" alt="">
+        <h2>Book Found</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Book Id</th>
+                    <th>Name of the Book</th>
+                    <th>Author Name</th>
+                    <th>Number of Pages</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:if="${libraries}">
+                    <td th:text="${libraries.bookid}"></td>
+                    <td th:text="${libraries.bookname}"></td>
+                    <td th:text="${libraries.authorname}"></td>
+                    <td th:text="${libraries.pages}"></td>
+                    <td th:text="${libraries.price}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

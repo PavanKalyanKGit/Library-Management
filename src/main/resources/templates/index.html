@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Management</title>
+        <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2991/2991148.png">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .main-content {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .buttons a {
+            text-decoration: none;
+            margin: 10px;
+        }
+        .buttons input.crud {
+            display: block;
+            width: 160px;
+            padding: 10px;
+            font-size: 1em;
+            color: white;
+            background-color: #3c5166;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .buttons input.crud:hover {
+            background-color: #4c6680;
+        }
+        .buttons input#dele {
+            background-color: #e74c3c;
+        }
+        .buttons input#dele:hover {
+            background-color: #c0392b;
+        }
+        .image-section {
+            width: 100%;
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .image-section img {
+            width: 250px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .quote {
+            font-style: italic;
+            color: #555;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .content-section {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+        .content-section h2 {
+            color: #2c3e50;
+        }
+        .content-section p {
+            font-size: 1.1em;
+            line-height: 1.6em;
+        }
+    </style>
+    <link rel="icon" type="image/x-icon" href="images/faviconimg.jpg">
+</head>
+<body>
+    <header>Library Management</header>
+    <div class="main-content">
+        <div class="buttons">
+            <a href="/addbookpage">
+                <input type="submit" class="crud" name="add" value="Add" title="Click Add to add a new Book Record">
+            </a>
+            <a href="/updatebookpage">
+                <input type="submit" class="crud" name="update" value="Update" title="Click Update to update the existing Book Record">
+            </a>
+            <a href="/searchpage">
+                <input type="submit" class="crud" name="search" value="Search" title="Click Search to find a Book Record">
+            </a>
+            <a href="/viewallexisting">
+                <input type="submit" class="crud" name="view" value="View" title="Click View To Find All the Books Records">
+            </a>
+            <a href="/deletepage">
+                <input type="submit" class="crud" id="dele" name="delete" value="Delete" title="Click Delete to Delete a Existing Book Record">
+            </a>
+        </div>
+        <div class="image-section">
+            <img src="https://source.unsplash.com/250x150/?library" alt="Library Image 1">
+            <img src="https://source.unsplash.com/250x150/?books" alt="Library Image 2">
+            <img src="https://source.unsplash.com/250x150/?reading" alt="Library Image 3">
+            <img src="https://source.unsplash.com/250x150/?education" alt="Library Image 4">
+        </div>
+        <div class="quote">"A library is not a luxury but one of the necessities of life." – Henry Ward Beecher</div>
+        <div class="content-section">
+            <h2>The Importance of Libraries</h2>
+            <p>
+                Libraries play a crucial role in the educational and cultural fabric of society. They provide access to a vast array of resources, including books, journals, and digital media, which support lifelong learning and knowledge acquisition.
+            </p>
+            <p>
+                Beyond just being a repository for books, libraries serve as community hubs where people can come together to share ideas, attend workshops, and participate in cultural events. They offer a quiet space for study and research, which is invaluable for students and professionals alike.
+            </p>
+            <p>
+                In an age where information is readily available online, libraries also help individuals develop critical thinking and information literacy skills, enabling them to navigate and evaluate the vast amounts of data they encounter.
+            </p>
+            <p>
+                The presence of a library in a community enhances the quality of life by promoting literacy, supporting education, and fostering a love for reading and learning. Libraries are essential for preserving the intellectual and cultural heritage of society.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
